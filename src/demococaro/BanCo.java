@@ -33,7 +33,7 @@ public class BanCo {
     }
     
     public void veBanCo(Graphics g){
-        g.setColor(Color.BLACK);
+        g.setColor(new Color(148,78,25));
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(1));
         for(int i = 0; i <= soCot; i++){

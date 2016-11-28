@@ -1127,9 +1127,6 @@ public class CaroChess {
         System.out.println("\nVị trí TC tốt nhất : Dòng: " + oCoTC_KQ.getDong() + " Cột: " + oCoTC_KQ.getCot());
         System.out.println("Vị trí PN tốt nhất : Dòng: " + oCoPN_KQ.getDong() + "  Cột: " + oCoPN_KQ.getCot());
         System.out.println("Điểm Max TC và điểm Max PN : " + diemMaxTC + " <-> "  + diemMaxPN);
-
-        System.out.println("So lan goi : " + dem);
-        dem = 0;
         if(diemMaxPN < 100000 || diemMaxTC >= diemMaxPN){
             System.out.println("--> tấn công");
             return oCoTC_KQ;
