@@ -272,7 +272,9 @@ public class CaroChess {
                 if (dongHienTai - dem - 1 >= 0 && mangOCo[dongHienTai - dem - 1][cotHienTai].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_B--;
                 } else if (diemNuocDoi_B > 0 && dongHienTai - dem - 1 >= 0 && mangOCo[dongHienTai - dem - 1][cotHienTai].getSohuu() == luotdi
-                        && (dongHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai].getSohuu() == luotdi)
+                        || (dongHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai].getSohuu() == 0 
+                        && dongHienTai - dem - 3 >= 0 && mangOCo[dongHienTai - dem - 3][cotHienTai].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_B++;
                 }
                 break;
@@ -305,7 +307,9 @@ public class CaroChess {
                 if (dongHienTai + dem + 1 < 20 && mangOCo[dongHienTai + dem + 1][cotHienTai].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_N--;
                 } else if (diemNuocDoi_N > 0 && dongHienTai + dem + 1 < banco.getSoDong() && mangOCo[dongHienTai + dem + 1][cotHienTai].getSohuu() == luotdi
-                        && (dongHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai].getSohuu() == luotdi)
+                        || (dongHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai].getSohuu() == 0 
+                        && dongHienTai + dem + 3 < banco.getSoDong() && mangOCo[dongHienTai + dem + 3][cotHienTai].getSohuu() != thayDoiLuotDi(luotdi))) ){
                     diemNuocDoi_N++;
                 }
                 break;
@@ -338,7 +342,9 @@ public class CaroChess {
                 if (cotHienTai - dem - 1 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_T--;
                 } else if (diemNuocDoi_T > 0 && cotHienTai - dem - 1 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 1].getSohuu() == luotdi
-                        && (cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 2].getSohuu() == luotdi)  
+                        || (cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 2].getSohuu() == 0 
+                        && cotHienTai - dem - 3 >= 0 && mangOCo[dongHienTai][cotHienTai - dem - 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_T++;
                 }
 
@@ -373,7 +379,9 @@ public class CaroChess {
                 if (cotHienTai + dem + 1 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_D--;
                 } else if (diemNuocDoi_D > 0 && cotHienTai + dem + 1 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 1].getSohuu() == luotdi
-                        && (cotHienTai + dem + 2 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((cotHienTai + dem + 2 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 2].getSohuu() == luotdi) 
+                        || (cotHienTai + dem + 2 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 2].getSohuu() == 0 
+                        && cotHienTai + dem + 3 < banco.getSoCot() && mangOCo[dongHienTai][cotHienTai + dem + 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_T++;
                 }
                 break;
@@ -406,7 +414,9 @@ public class CaroChess {
                 if (dongHienTai + dem + 1 < 20 && cotHienTai + dem + 1 < banco.getSoDong() && mangOCo[dongHienTai + dem + 1][cotHienTai + dem + 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_DN--;
                 } else if (diemNuocDoi_DN > 0 && dongHienTai + dem + 1 < banco.getSoDong() && cotHienTai + dem + 1 < banco.getSoDong() && mangOCo[dongHienTai + dem + 1][cotHienTai + dem + 1].getSohuu() == luotdi
-                        && (dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai + dem + 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai + dem + 2].getSohuu() == luotdi ) 
+                        || (dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai + dem + 2][cotHienTai + dem + 2].getSohuu() == 0 
+                        && dongHienTai + dem + 3 < banco.getSoDong() && cotHienTai + dem + 3 < banco.getSoDong() && mangOCo[dongHienTai + dem + 3][cotHienTai + dem + 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_T++;
                 }
                 break;
@@ -439,7 +449,9 @@ public class CaroChess {
                 if (dongHienTai - dem - 1 >= 0 && cotHienTai - dem - 1 >= 0 && diemNuocDoi_TB > 0 && mangOCo[dongHienTai - dem - 1][cotHienTai - dem - 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_TB--;
                 } else if (diemNuocDoi_TB > 0 && dongHienTai - dem - 1 >= 0 && cotHienTai - dem - 1 >= 0 && mangOCo[dongHienTai - dem - 1][cotHienTai - dem - 1].getSohuu() == luotdi
-                        && (dongHienTai - dem - 2 >= 0 && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai - dem - 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai - dem - 2 >= 0 && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai - dem - 2].getSohuu() == luotdi) 
+                        || (dongHienTai - dem - 2 >= 0 && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai - dem - 2][cotHienTai - dem - 2].getSohuu() == 0 
+                        && dongHienTai - dem - 3 >= 0 && cotHienTai - dem - 3 >= 0 && mangOCo[dongHienTai - dem - 3][cotHienTai - dem - 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_TB++;
                 }
                 break;
@@ -472,7 +484,9 @@ public class CaroChess {
                 if (diemNuocDoi_TN > 0 && dongHienTai + dem + 1 < banco.getSoDong() && cotHienTai - dem - 1 >= 0 && mangOCo[dongHienTai + dem + 1][cotHienTai - dem - 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_TN--;
                 } else if (diemNuocDoi_TN > 0 && dongHienTai + dem + 1 < banco.getSoDong() && cotHienTai - dem - 1 >= 0 && mangOCo[dongHienTai + dem + 1][cotHienTai - dem - 1].getSohuu() == luotdi
-                        && (dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai + dem + 2][cotHienTai - dem - 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai + dem + 2][cotHienTai - dem - 2].getSohuu() == luotdi)
+                        || (dongHienTai + dem + 2 < banco.getSoDong() && cotHienTai - dem - 2 >= 0 && mangOCo[dongHienTai + dem + 2][cotHienTai - dem - 2].getSohuu() == 0
+                        && dongHienTai + dem + 3 < banco.getSoDong() && cotHienTai - dem - 3 >= 0 && mangOCo[dongHienTai + dem + 3][cotHienTai - dem - 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_TN++;
                 }
                 break;
@@ -505,7 +519,9 @@ public class CaroChess {
                 if (diemNuocDoi_DB > 0 && dongHienTai - dem - 1 >= 0 && cotHienTai + dem + 1 < banco.getSoDong() && mangOCo[dongHienTai - dem - 1][cotHienTai + dem + 1].getSohuu() == thayDoiLuotDi(luotdi)) {
                     diemNuocDoi_DB--;
                 } else if (diemNuocDoi_DB > 0 && dongHienTai - dem - 1 >= 0 && cotHienTai + dem + 1 < banco.getSoDong() && mangOCo[dongHienTai - dem - 1][cotHienTai + dem + 1].getSohuu() == luotdi
-                        && (dongHienTai - dem - 2 >= 0 && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai - dem - 2][cotHienTai + dem + 2].getSohuu() != thayDoiLuotDi(luotdi))) {
+                        && ((dongHienTai - dem - 2 >= 0 && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai - dem - 2][cotHienTai + dem + 2].getSohuu() == luotdi)
+                        ||(dongHienTai - dem - 2 >= 0 && cotHienTai + dem + 2 < banco.getSoDong() && mangOCo[dongHienTai - dem - 2][cotHienTai + dem + 2].getSohuu() == 0 
+                        && dongHienTai - dem - 3 >= 0 && cotHienTai + dem + 3 < banco.getSoDong() && mangOCo[dongHienTai - dem - 3][cotHienTai + dem + 3].getSohuu() != thayDoiLuotDi(luotdi)))) {
                     diemNuocDoi_DB++;
                 }
                 break;

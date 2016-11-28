@@ -10,6 +10,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Toolkit;
 
 /**
  *
@@ -28,6 +29,7 @@ public class GiaoDien extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocation(450, 200);
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/demococaro/giaodien/icon.png")));
         caroChess = new CaroChess();
         caroChess.khoiTaoMangOCo();
         grs = jPanel_BanCo.getGraphics();
@@ -78,6 +80,7 @@ public class GiaoDien extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Caro Chess");
         setBackground(new java.awt.Color(243, 239, 228));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
