@@ -43,6 +43,12 @@ public class BanCo {
             g2.drawLine(0, j* OCo.CHIEUCAO, soCot * OCo.CHIEURONG, j * OCo.CHIEUCAO);
         }
     }
+    public void veKhungOCo(Graphics g, Point point, Color color){
+        g.setColor(color);
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(2));
+        g2.drawRect(point.x +1, point.y + 1,OCo.CHIEURONG - 2,OCo.CHIEUCAO - 2);
+    }
     
     public void veQuanCo(Graphics g, Point point, Color color, int luotchoi){
         g.setColor(color);
